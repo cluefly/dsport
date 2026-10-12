@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DSport</string>
+    <string name="header">DSport</string>
+    <string name="subtitle">通用页是这台手机上的原始读数。送给系统和微信的 step_counter 是当天步数，每天 0 点从 0 开始。</string>
+    <string name="tab_general">通用</string>
+    <string name="tab_wechat">微信</string>
+    <string name="wechat_title">微信服务端配置</string>
+    <string name="wechat_waiting">正在读取主用户的微信运动配置。</string>
+    <string name="wechat_refresh">重新读取</string>
+    <string name="wechat_stop">停止微信</string>
+    <string name="wechat_start">启动微信</string>
+    <string name="wechat_apply">覆盖通用页上限</string>
+    <string name="counter_title">计步器</string>
+    <string name="counter_type">android.sensor.step_counter</string>
+    <string name="detector_title">步数检测</string>
+    <string name="detector_type">android.sensor.step_detector</string>
+    <string name="minute_title">厂商分钟计步</string>
+    <string name="minute_type">qti.sensor.pedometer_minute</string>
+    <string name="waiting">等待数据</string>
+    <string name="detector_count_initial">本次打开后触发 0 次</string>
+    <string name="minute_seq_initial">序号 values[1] —（不修改）</string>
+    <string name="minute_extra_initial">其他：等待数据</string>
+    <string name="hook_initial">系统服务侧：还没有回调</string>
+    <string name="time_initial">收到时间 —</string>
+    <string name="edit_title">修改当天步数</string>
+    <string name="edit_body">只改 step_counter，送出的是当天步数：当天真实步数加上自动累加的步数。真实步数来自开机后的累计计数，只有重启手机才会归零；0 点只让自动累加从 0 再开始。当天之内自动累加只增不减，不能填负数。开关打开时，输入的是这一天要自动累加的目标；低于已累加的数字不会减回去。开关关闭再保存时，输入的是在已累加步数上再增加的数量。红色的每日上限默认 48000，只限制自动累加的总和，不含真实步数，可以修改。每分钟和每 5 分钟限制的是真实步数与同期自动累加的合计。每分钟合计默认是微信每分钟上限减 10，微信为 300 时这里是 290。每 5 分钟合计用微信的上限，例如 1500。到达这个 5 分钟数时微信会丢掉这一截，所以自动累加停在它减 1。真实步数一增加就暂停自动累加，连续 1 分钟没有新的真实步数后再继续，恢复后仍受上述合计限制。每分钟、每 5 分钟可以手改，但不能大于微信页读到的配置，超出的输入会放弃。强制重置和每天 0 点一样，只把今天的自动累加清零。</string>
+    <string name="step_cap_hint">每日自动累加上限（不含真实步数）</string>
+    <string name="rate_minute_hint">每分钟合计上限</string>
+    <string name="rate_five_hint">5 分钟合计上限</string>
+    <string name="switch_label">启用累计值偏移</string>
+    <string name="offset_hint">目标累计步数，不能为负数</string>
+    <string name="offset_add_hint">在已计入步数上再增加</string>
+    <string name="save">保存</string>
+    <string name="reset_credit">强制重置自动累加</string>
+    <string name="reset_credit_title">重置自动累加</string>
+    <string name="reset_credit_body">自动累加清零。送出值变成当前真实步数加 0，之后真实步数增加，送出值跟着增加。目标和上限不变。</string>
+    <string name="reset_credit_done">已重置。送出值等于当前真实步数</string>
+</resources>

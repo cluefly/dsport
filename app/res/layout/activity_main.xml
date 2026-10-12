@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7F5"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/header"
+            android:textColor="#143D2C"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingBottom="8dp"
+            android:text="@string/subtitle"
+            android:textColor="#3E4A45"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/perm_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:textColor="#8A3B12"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <Button
+                android:id="@+id/tab_general"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tab_general" />
+
+            <Button
+                android:id="@+id/tab_wechat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="@string/tab_wechat" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/general_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView style="@style/CardTitle" android:text="@string/counter_title" />
+            <TextView style="@style/CardType" android:text="@string/counter_type" />
+            <TextView
+                android:id="@+id/counter_value"
+                style="@style/StepCounterValue"
+                android:text="@string/waiting" />
+            <TextView
+                android:id="@+id/counter_time"
+                style="@style/CardMeta"
+                android:text="@string/time_initial" />
+            <TextView
+                android:id="@+id/counter_hook"
+                style="@style/CardMeta"
+                android:text="@string/hook_initial" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView style="@style/CardTitle" android:text="@string/detector_title" />
+            <TextView style="@style/CardType" android:text="@string/detector_type" />
+            <TextView
+                android:id="@+id/detector_value"
+                style="@style/CardValue"
+                android:text="@string/waiting" />
+            <TextView
+                android:id="@+id/detector_count"
+                style="@style/CardMeta"
+                android:text="@string/detector_count_initial" />
+            <TextView
+                android:id="@+id/detector_time"
+                style="@style/CardMeta"
+                android:text="@string/time_initial" />
+            <TextView
+                android:id="@+id/detector_hook"
+                style="@style/CardMeta"
+                android:text="@string/hook_initial" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView style="@style/CardTitle" android:text="@string/minute_title" />
+            <TextView style="@style/CardType" android:text="@string/minute_type" />
+            <TextView
+                android:id="@+id/minute_value"
+                style="@style/CardValue"
+                android:text="@string/waiting" />
+            <TextView
+                android:id="@+id/minute_seq"
+                style="@style/CardMeta"
+                android:text="@string/minute_seq_initial" />
+            <TextView
+                android:id="@+id/minute_extra"
+                style="@style/CardMeta"
+                android:text="@string/minute_extra_initial" />
+            <TextView
+                android:id="@+id/minute_time"
+                style="@style/CardMeta"
+                android:text="@string/time_initial" />
+            <TextView
+                android:id="@+id/minute_hook"
+                style="@style/CardMeta"
+                android:text="@string/hook_initial" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView style="@style/CardTitle" android:text="@string/edit_title" />
+            <TextView
+                style="@style/CardMeta"
+                android:paddingBottom="8dp"
+                android:text="@string/edit_body" />
+
+            <LinearLayout
+                android:id="@+id/rate_rows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="4dp" />
+
+            <EditText
+                android:id="@+id/per_minute_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/rate_minute_hint"
+                android:importantForAutofill="no"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/per_five_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/rate_five_hint"
+                android:importantForAutofill="no"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/step_cap_hint"
+                android:textColor="#C62828"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/step_cap_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/step_cap_hint"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textColor="#C62828"
+                android:textColorHint="#C62828"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Switch
+                android:id="@+id/enabled_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/switch_label" />
+
+            <EditText
+                android:id="@+id/offset_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/offset_hint"
+                android:importantForAutofill="no"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/saved_line"
+                style="@style/CardMeta"
+                android:paddingTop="8dp" />
+
+            <TextView
+                android:id="@+id/preview_line"
+                style="@style/CardMeta" />
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#1B6B4A"
+                android:text="@string/save"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/reset_credit_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#F8E8E6"
+                android:text="@string/reset_credit"
+                android:textColor="#C62828" />
+        </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wechat_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView style="@style/CardTitle" android:text="@string/wechat_title" />
+                <TextView
+                    android:id="@+id/wechat_status"
+                    style="@style/CardMeta"
+                    android:paddingBottom="8dp"
+                    android:text="@string/wechat_waiting" />
+                <LinearLayout
+                    android:id="@+id/wechat_rows"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <TextView
+                    android:id="@+id/wechat_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="#E7F3EC"
+                    android:padding="12dp"
+                    android:textColor="#143D2C"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/wechat_apply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="#1B6B4A"
+                    android:text="@string/wechat_apply"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/wechat_refresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="#E4EBE7"
+                    android:text="@string/wechat_refresh"
+                    android:textColor="#143D2C" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/wechat_stop"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:background="#8A3B12"
+                        android:text="@string/wechat_stop"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/wechat_start"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#1B6B4A"
+                        android:text="@string/wechat_start"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

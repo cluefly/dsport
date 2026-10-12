@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="xposed_scope">
+        <item>com.oplus.exsystemservice</item>
+        <item>com.oplus.healthservice</item>
+        <item>com.tencent.mm</item>
+    </string-array>
+</resources>

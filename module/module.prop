@@ -1,0 +1,6 @@
+id=dsport
+name=DSport
+version=0.2
+versionCode=2
+author=jsheng
+description=读取计步器、步数检测和厂商分钟计步。送给系统和微信的 step_counter 是当天真实步数加上自动累加。每分钟和每 5 分钟按两者合计限速，每分钟默认比微信少 10。每日自动累加上限默认 48000，不含真实步数，可以修改。分钟计步和步数检测只显示。需要 Vector。
